@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="MenuItemTest" project="MenuItemPrototype" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="menu.item.prototype.MenuItemTest" time="0.739">
+    <testcase name="testMenuItemSetUp" classname="menu.item.prototype.MenuItemTest" time="0.739"/>
+  </testsuite>
+</testrun>

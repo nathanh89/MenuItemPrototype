@@ -1,0 +1,34 @@
+TDD:
+End Goal:
+Menu Item will have a name, a price, a recipe, a picture, QR code
+Recipe will have a name, set of tools, set of ingredients, preparation time, set of preparation steps
+
+To-Do:
+-Create a menu item class with attributes item, price, recipe, picture, and QR code. - DONE
+
+-Create a class recipe with attributes name, set of tools, set of ingredients, set of preparation steps, preparation time - DONE
+
+-Add a new tool to the list of tools, verify it is in there.
+-Add several tools to the list of tools, check that all elements are in list as expected.
+-Make sure that preparation time can only be positive
+-Make an exception, illegal argument, for preparation time that it cannot be negative
+-figure out how to use pictures instead of strings for picture and QR
+-have the ability to select images for picture and QR
+
+-----------------------
+BDD:
+Feature: Create a menu item
+
+As a user, when I look at a menu item, I want certain information. I want to have the name of the item, price, a recipe for making it, a picture of the item, and a QR code.
+
+Given: The data for name, price, recipe, picture, QR code
+When: A menu item is created
+Then: All the elements of a menu item (name, price, recipe, pic, QR) should be set according to their associated values.
+
+Feature: Add a tool to the recipe
+
+As a user, if a recipe requires extra tools, I want to know what they are. For this to happen, tools need to have the ability to be added to a recipe
+
+Given: A recipe
+When: a tool is added
+Then: A tool exists within a recipe's tool list
