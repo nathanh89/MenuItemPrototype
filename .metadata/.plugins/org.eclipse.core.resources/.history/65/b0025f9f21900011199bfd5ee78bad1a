@@ -1,16 +1,17 @@
 package menu.item.prototype;
 import static org.junit.Assert.*;
 import org.junit.Test
+import menu.item.protoype.Recipe
 
 class MenuItemTest {
 	
 	@Test
 	void testMenuItemSetUp(){
-		def sirloin = new MenuItem( name:"Sirloin Steak", 
-								    price:10, 
-								    recipe:"Throw it on the grill",
-								    picture:"filler for picture", 
-								    QR:"filler for QR")
+		def sirloin = new MenuItem("name":"Sirloin Steak", 
+								   "price":10, 
+								   "recipe":"Throw it on the grill",
+								   "picture":"filler for picture", 
+								   "QR":"filler for QR")
 		
 		assert sirloin.name == "Sirloin Steak"
 		assert sirloin.price == 10
@@ -64,4 +65,18 @@ class MenuItemTest {
 		testRecipe.addTools("Spatula")
 		assert testRecipe.tools == ["Spatula"]
 	}
+	
+	@Test
+	void testtoStringMethodReturn(){
+		def testRecipe = new Recipe( name:"Succulent Sirloin Recipe",
+									 prepTimeInMinutes:15,
+									 tools:["Rolling Pin", "Cutting Board", 
+										      "Kitchen Knife", "Frying Pan"], 
+									 ingredients:["Steak", "Seasoning"], 
+									 preparationSteps: ["Lay it out", "Throw it on the grill"])
+		
+		assert testRecipe.toString() == """Succulent Sirloin Recipe - 15 - Rolling Pin, Cutting Board, 
+                                           Kitchen Knife, Frying Pan - Steak, Seasoning - Lay it out, 
+		                                   Throw it on the grill"""
+	}	
 }

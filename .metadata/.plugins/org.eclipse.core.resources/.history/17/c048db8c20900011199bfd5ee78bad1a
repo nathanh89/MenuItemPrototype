@@ -6,11 +6,11 @@ class MenuItemTest {
 	
 	@Test
 	void testMenuItemSetUp(){
-		def sirloin = new MenuItem( name:"Sirloin Steak", 
-								    price:10, 
-								    recipe:"Throw it on the grill",
-								    picture:"filler for picture", 
-								    QR:"filler for QR")
+		def sirloin = new MenuItem("name":"Sirloin Steak", 
+								   "price":10, 
+								   "recipe":"Throw it on the grill",
+								   "picture":"filler for picture", 
+								   "QR":"filler for QR")
 		
 		assert sirloin.name == "Sirloin Steak"
 		assert sirloin.price == 10

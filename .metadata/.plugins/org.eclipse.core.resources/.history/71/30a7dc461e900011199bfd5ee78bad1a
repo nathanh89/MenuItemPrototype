@@ -9,11 +9,7 @@ class Recipe {
 	Collection preparationSteps
 	
 	@Override
-	public String toString() { 
-		 """${name} - ${prepTimeInMinutes} -
-		 ${tools.join(",")} - ${ingredients.join(",")} -
-		 ${preparationSteps.join(",")}"""
-	}
+	public String toString(){ "${name} - ${prepTimeInMinutes}" }
 	
 	def addTools(Collection newTools){
 		tools += newTools	

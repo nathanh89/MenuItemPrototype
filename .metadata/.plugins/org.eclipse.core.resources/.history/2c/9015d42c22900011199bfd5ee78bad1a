@@ -64,4 +64,18 @@ class MenuItemTest {
 		testRecipe.addTools("Spatula")
 		assert testRecipe.tools == ["Spatula"]
 	}
+	
+	@Test
+	void testtoStringMethodReturn(){
+		def testRecipe = new Recipe( name:"Succulent Sirloin Recipe",
+									 prepTimeInMinutes:15,
+									 tools:["Rolling Pin", "Cutting Board", 
+										      "Kitchen Knife", "Frying Pan"], 
+									 ingredients:["Steak", "Seasoning"], 
+									 preparationSteps: ["Lay it out", "Throw it on the grill"])
+		
+		assert testRecipe.toString() == """Succulent Sirloin Recipe - 15 - Rolling Pin, Cutting Board, 
+                                           Kitchen Knife, Frying Pan - Steak, Seasoning - Lay it out, 
+		                                   Throw it on the grill"""
+	}	
 }
