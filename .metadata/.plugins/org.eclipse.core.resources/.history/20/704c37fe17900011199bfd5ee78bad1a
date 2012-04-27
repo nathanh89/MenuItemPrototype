@@ -1,0 +1,60 @@
+package menu.item.prototype;
+import static org.junit.Assert.*;
+import org.junit.Test
+
+class MenuItemTest {
+	
+	@Test
+	void testMenuItemSetUp(){
+		def sirloin = new MenuItem("name":"Sirloin Steak", 
+								   "price":10, 
+								   "recipe":"Throw it on the grill",
+								   "picture":"filler for picture", 
+								   "QR":"filler for QR")
+		
+		assert sirloin.name == "Sirloin Steak"
+		assert sirloin.price == 10
+		assert sirloin.recipe == "Throw it on the grill"
+		assert sirloin.picture == "filler for picture"
+		assert sirloin.QR == "filler for QR"
+	}
+	
+	@Test 
+	void testRecipeSetUpNonLists(){
+		def sirloinrecipe = new Recipe( "name":"Succulent Sirloin Recipe", 
+										"tools": [], 
+										"ingredients":[], 
+										"prepTime":15, 
+										"preparationSteps": [])
+		
+		assert sirloinrecipe.name == "Succulent Sirloin Recipe"
+		assert sirloinrecipe.prepTime == 15
+	}
+	
+	@Test
+	void testRecipeToolSetUpSingle(){
+		def testRecipe = new Recipe("tools":[])
+		testRecipe.setTools(["Rolling Pin"])
+		assert testRecipe.tools == ["Rolling Pin"]
+	}
+	
+	@Test
+	void testMultipleRecipeToolSetUpMultiple(){
+		def testRecipe = new Recipe("tools": [])
+		testRecipe.setTools(["Rolling Pin", "Cutting Board", 
+						   "Kitchen Knife", "Frying Pan"])
+		assert testRecipe.tools[0] == "Rolling Pin"
+		assert testRecipe.tools[1] == "Cutting Board"
+		assert testRecipe.tools[2] == "Kitchen Knife"
+		assert testRecipe.tools[3] == "Frying Pan"
+	}
+	
+	@Test
+	void testRecipeToolAddition(){
+		def testRecipe = new Recipe("tools": [])
+		testRecipe.setTools(["Rolling Pin", "Cutting Board", 
+						   "Kitchen Knife", "Frying Pan"])
+		testRecipe.addTools("Spatula")
+		assert testRecipe[4] == "Spatula"
+	}
+}

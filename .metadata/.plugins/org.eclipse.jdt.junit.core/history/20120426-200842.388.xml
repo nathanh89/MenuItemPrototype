@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="MenuItemTest" project="MenuItemPrototype" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="menu.item.prototype.MenuItemTest" time="1.53">
+    <testcase name="testMenuItemSetUp" classname="menu.item.prototype.MenuItemTest" time="1.367"/>
+    <testcase name="testRecipeSetUpNonLists" classname="menu.item.prototype.MenuItemTest" time="0.022"/>
+    <testcase name="testRecipeToolAddition" classname="menu.item.prototype.MenuItemTest" time="0.105"/>
+    <testcase name="testMultipleRecipeToolAddition" classname="menu.item.prototype.MenuItemTest" time="0.035"/>
+  </testsuite>
+</testrun>

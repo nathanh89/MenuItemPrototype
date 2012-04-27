@@ -1,0 +1,15 @@
+package menu.item.codetester;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+class GroovyCodeTester {
+
+	@Test
+	void collectionTester(){
+		def tools = []
+		tools.add(["Filler"])
+		assert tools[0] == "Filler"
+	
+	}
+}

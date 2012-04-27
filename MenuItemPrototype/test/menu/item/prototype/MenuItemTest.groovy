@@ -32,9 +32,29 @@ class MenuItemTest {
 	}
 	
 	@Test
+	void testRecipeToolSetUpSingle(){
+		def testRecipe = new Recipe("tools":[])
+		testRecipe.setTools(["Rolling Pin"])
+		assert testRecipe.tools == ["Rolling Pin"]
+	}
+	
+	@Test
+	void testMultipleRecipeToolSetUpMultiple(){
+		def testRecipe = new Recipe("tools": [])
+		testRecipe.setTools(["Rolling Pin", "Cutting Board", 
+						   "Kitchen Knife", "Frying Pan"])
+		assert testRecipe.tools[0] == "Rolling Pin"
+		assert testRecipe.tools[1] == "Cutting Board"
+		assert testRecipe.tools[2] == "Kitchen Knife"
+		assert testRecipe.tools[3] == "Frying Pan"
+	}
+	
+	@Test
 	void testRecipeToolAddition(){
 		def testRecipe = new Recipe("tools": [])
-		testRecipe.addTool("rolling pin")
-		assert testRecipe.tools.contains("rolling pin")
+		testRecipe.setTools(["Rolling Pin", "Cutting Board", 
+						   "Kitchen Knife", "Frying Pan"])
+		testRecipe.addTools(["Spatula"])
+		assert testRecipe.tools[4] == "Spatula"
 	}
 }

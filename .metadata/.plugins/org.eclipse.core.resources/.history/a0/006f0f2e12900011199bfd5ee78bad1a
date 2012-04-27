@@ -1,0 +1,16 @@
+package menu.item.prototype
+
+class Recipe {
+	
+	def name
+	def Collection tools
+	def ingredients
+	def prepTime
+	def preparationSteps
+	
+	def String toString(){}
+
+	def addTool(Collection newTools){
+		tools = tools.add(newTools)
+	}
+}
