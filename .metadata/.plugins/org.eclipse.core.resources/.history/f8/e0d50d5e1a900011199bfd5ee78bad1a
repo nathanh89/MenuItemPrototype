@@ -53,15 +53,8 @@ class MenuItemTest {
 	void testRecipeToolAddition(){
 		def testRecipe = new Recipe("tools": [])
 		testRecipe.setTools(["Rolling Pin", "Cutting Board", 
-						     "Kitchen Knife", "Frying Pan"])
+						   "Kitchen Knife", "Frying Pan"])
 		testRecipe.addTools(["Spatula"])
 		assert testRecipe.tools[4] == "Spatula"
-	}
-	
-	@Test
-	void testStringInputForAddTools(){
-		def testRecipe = new Recipe("tools":[])
-		testRecipe.addTools("Spatula")
-		assert testRecipe.tools == ["Spatula"]
 	}
 }

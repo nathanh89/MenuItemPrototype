@@ -9,8 +9,8 @@ class GroovyCodeTester {
 	@Test
 	void collectionTester(){
 		def tools = []
-		def newTools
-		newTools = "Filler"
+		def newTools = []
+		newTools = ["Filler"]
 		tools = newTools
 		assert tools == ["Filler"]
 	

@@ -62,6 +62,6 @@ class MenuItemTest {
 	void testStringInputForAddTools(){
 		def testRecipe = new Recipe("tools":[])
 		testRecipe.addTools("Spatula")
-		assert testRecipe.tools == ["Spatula"]
+		assert testRecipe.tools == ["SpatulaX"]
 	}
 }

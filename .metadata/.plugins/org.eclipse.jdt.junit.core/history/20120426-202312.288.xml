@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="MenuItemTest" project="MenuItemPrototype" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="menu.item.prototype.MenuItemTest" time="1.669">
+    <testcase name="testMenuItemSetUp" classname="menu.item.prototype.MenuItemTest" time="1.384"/>
+    <testcase name="testRecipeSetUpNonLists" classname="menu.item.prototype.MenuItemTest" time="0.024"/>
+    <testcase name="testRecipeToolSetUpSingle" classname="menu.item.prototype.MenuItemTest" time="0.133"/>
+    <testcase name="testMultipleRecipeToolSetUpMultiple" classname="menu.item.prototype.MenuItemTest" time="0.102"/>
+    <testcase name="testRecipeToolAddition" classname="menu.item.prototype.MenuItemTest" time="0.026"/>
+  </testsuite>
+</testrun>

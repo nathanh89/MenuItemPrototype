@@ -5,11 +5,11 @@ Recipe will have a name, set of tools, set of ingredients, preparation time, set
 
 To-Do:
 -Create a menu item class with attributes item, price, recipe, picture, and QR code. - DONE
-
 -Create a class recipe with attributes name, set of tools, set of ingredients, set of preparation steps, preparation time - DONE
+-Add a new tool to the list of tools, verify it is in there. - DONE
+-Add several tools to the list of tools, check that all elements are in list as expected. - DONE
+-Ensure that if a string and not a collection is input into addTools it won't break the method. - DONE
 
--Add a new tool to the list of tools, verify it is in there.
--Add several tools to the list of tools, check that all elements are in list as expected.
 -Make sure that preparation time can only be positive
 -Make an exception, illegal argument, for preparation time that it cannot be negative
 -figure out how to use pictures instead of strings for picture and QR

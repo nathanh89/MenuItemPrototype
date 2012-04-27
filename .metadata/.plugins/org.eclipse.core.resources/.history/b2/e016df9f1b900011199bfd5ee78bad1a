@@ -11,10 +11,6 @@ class Recipe {
 	def String toString(){}
 	
 	def addTools(Collection newTools){
-		tools += newTools	
-	}
-	
-	def addTools(String newTool){
-		tools += newTool
+		tools = tools + newTools	
 	}
 }
